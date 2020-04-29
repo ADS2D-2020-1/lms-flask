@@ -1,17 +1,17 @@
-from flask import Flask
+from flask import Flask, render_template
 
 
-app = Flask('minha-app')
+app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return 'Olá Mundo!'
+    return render_template('index.html')
 
 
 @app.route('/ola/')
 def ola():
-    return 'Olá usuário!'
+    return '<h1>Olá usuário!</h1>'
 
 
 app.run(debug=True)
