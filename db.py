@@ -27,19 +27,13 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
-"""
-@app.before_request
-def before_request():
-    g.db = get_db()
-    g.query_db = query_db
 
-
-@app.teardown_request
-def teardown_request(exception):
-    db = getattr(g, '_database', None)
-    if db is not None:
-        db.close()
-"""
+def execute_db(query, args=()):
+    conn = get_db()
+    with conn:
+        cur = conn.cursor()
+        cur.execute(query, args)
+        return cur.lastrowid
 
 
 if __name__ == "__main__":

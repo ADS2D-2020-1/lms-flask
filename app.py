@@ -1,5 +1,7 @@
 from flask import Flask, g
-from db import get_db, query_db
+from db import get_db, query_db, execute_db
+
+from curso_dao import listar_todos_cursos
 
 
 app = Flask(__name__)
@@ -9,6 +11,7 @@ app = Flask(__name__)
 def before_request():
     g.db = get_db()
     g.query_db = query_db
+    g.execute_db = execute_db
 
 
 @app.teardown_request
@@ -25,4 +28,3 @@ if __name__ == "__main__":
     app.run(
         debug=True
     )
-

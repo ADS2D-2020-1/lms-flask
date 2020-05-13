@@ -1,56 +1,70 @@
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Comunicação e Expressão (EAD)', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Fundamentos de Banco de Dados', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Introdução a Internet das Coisas - IOT', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Linguaguem de Programação I', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Lógica de Programação', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Matemática Aplicada', 80);
-
-
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Ambiente de Desenvolvimento e Operação', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Engenharia de Software', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Gestão de Projetos', 40);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Libras', 40);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Linguagem SQL', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Linguagem de Programação II', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Sociedade e Sustentabilidade', 40);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Tecnologia Web', 80);
-
-
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Análise e Modelagem de Sistemas', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Desenvolvimento de Aplicações Distribuídas', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Estrutura de Dados', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Interface Homem-Computador', 40);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Modelagem de Processos de Negócios', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('OPE1 - Oficina de Projeto Empresa 1', 80);
-
-
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Arquitetura e Projeto de Sistemas', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Desenvolvimento para Dispositivos Móveis', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Desenvolvimento para Internet das Coisas', 80);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('Legislação e Ética', 40);
-INSERT INTO disciplinas (nome, carga_horaria)
-VALUES ('OPE2 - Oficina de Projeto Empresa 2', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Soft Skills', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Fundamentos de Banco de Dados', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Linguaguem de Programação I', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Lógica com IoT', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Matemática Aplicada', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Empreendedorismo', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Fundamentos de Admnistração', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Lógica de Programação para Administração', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Português Instrumental', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Modelos de Negócio e Empreendedorismo', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Arquitetura de Redes de Computadores', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Protocolos e Interoperabilidade', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Administração de Redes e Sistemas', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Matemática', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Administração de Redes com Sistemas Operacionais Livres', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Routing', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Switching', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Segurança Cibernética - Cyber Security', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Técnicas de Programação', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Contabilidade Financeira', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Análise Exploratória de Dados', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Cálculo', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Macroeconomia', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Gestão de Projetos', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Ambiente de Desenvolvimento e Operação', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Engenharia de Software', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Linguagem SQL', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Linguagem de Programação II (com Estrutura de Dados)', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Tecnologia Web', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Ambientes Operacionais', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Desenvolvimento Web', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Linguagem de Programação II', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Análise e Modelagem de Sistemas', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Desenvolvimento com Automação Robótica de Processos - RPA', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Desenvolvimento de Aplicações Distribuídas', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Engenharia de Requisitos', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Ética e Direito Digital', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Desenvolvimento de APIs e Microserviços', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Desenvolvimento Mobile', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Análise e Modelagem de Sistemas', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Arquitetura e Projeto de Sistemas', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Qualidade de Software', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('OPE1 - Oficina de Projeto Empresa 1', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('UX & Design Thinking', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Business Intelligence', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Direito Digial', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Estudos Complementares em Análise e Desenvolvimento de Sistemas', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Frameworks Full Stack', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('OPE2 - Oficina de Projeto Empresa 2', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Desenvolvimento para Dispositivos Móveis', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Testes Automatizados e Qualidade de Software', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Business Agility', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Desenvolvimento de Sistemas de Informação', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Startup e Inovação', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Teoria da Computação', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Análise de Viabilidade de Projetos', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Análise Exploratória de Dados', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Gestão de Projetos de Inovação', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Integração e Desenvolvimento de Sistemas', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Business Intelligence', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Segurança e Auditoria de Sistemas', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Gestão de Infraestrutura de TI', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Trabalho de Conclusão de Curso 1 - TCC1', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Computação Cognitiva', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Governança de TI', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Sistemas Integrados de Gestão', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Trabalho de Conclusão de Curso 2 - TCC2', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Gestão Ágil de Projetos', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Redes em Longa Distância', 80);
+INSERT INTO disciplinas (nome, carga_horaria) VALUES ('Segurança de Redes e Infra', 80);

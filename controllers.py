@@ -23,9 +23,9 @@ def sobre():
 @app.route('/contato/', methods=['GET', 'POST'])
 def contato():
     if request.method == 'POST':
-        print('Isso foi um POST na página Contato')
+        print('Acesso por POST')
     else:
-        print('Isso foi um GET na página contato')
+        print('Acesso por GET')
 
     return render_template('contato.html')
 
@@ -37,11 +37,11 @@ def agradecimento():
 
 @app.route('/cursos/<sigla>/')
 def curso(sigla):
-    # sigla = request.args.get('sigla')
     curso = obter_curso(sigla.upper())
     return render_template(
         'curso.html',
-        curso=curso
+        curso=curso,
+        titulo=curso['nome']
     )
 
 

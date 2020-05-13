@@ -1,5 +1,5 @@
 INSERT INTO cursos (nome, sigla, tipo, coordenador, duracao, matutino, noturno)
-VALUES ('Análise e Desenvolvimento de Sistemas', 'ADS', 'Tecnólogo', 'Ana Cristina dos Santos', 4, 1, 1);
+VALUES ('Análise e Desenvolvimento de Sistemas', 'ADS', 'Tecnólogo', 'Ana Cristina dos Santos', 5, 1, 1);
 UPDATE cursos 
    SET sobre = '<p>
                 O curso de Análise e Desenvolvimento de Sistemas da Faculdade Impacta foi 

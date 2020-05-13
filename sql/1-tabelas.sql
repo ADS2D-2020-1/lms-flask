@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS cursos (
 
 CREATE TABLE IF NOT EXISTS disciplinas (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome            VARCHAR(50) NOT NULL UNIQUE,
+    nome            VARCHAR(50) NOT NULL,
     carga_horaria   INTEGER NOT NULL
 );
 
