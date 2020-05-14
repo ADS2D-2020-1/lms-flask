@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <h1>Controle de Cursos</h1>
+    <a href="{{ url_for('admin.curso_novo') }}" class="botao botao-sucesso">Incluir novo Curso</a>
+    <section>
+        <table style="margin: 8px; line-height: 2.5;">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sigla</th>
+                    <th>Tipo</th>
+                    <th>Coordenador</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for curso in cursos %}
+                    <tr>
+                        <td>{{ curso['nome'] }}</td>
+                        <td>{{ curso['sigla'] }}</td>
+                        <td>{{ curso['tipo'] }}</td>
+                        <td>{{ curso['coordenador'] }}</td>
+                        <td>
+                            <a href="{{ url_for('admin.curso_alterar', curso_id=curso['id']) }}" class="botao botao-secundario">Alterar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <ul>
+            
+        </ul>
+    </section>
+{% endblock %}

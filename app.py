@@ -1,10 +1,16 @@
 from flask import Flask, g
 from db import get_db, query_db, execute_db
 
+from admin import admin
 from curso_dao import listar_todos_cursos
 
 
 app = Flask(__name__)
+
+app.register_blueprint(
+    admin.admin_bp,
+    url_prefix='/admin/'
+)
 
 
 @app.before_request

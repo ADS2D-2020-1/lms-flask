@@ -43,6 +43,16 @@ def listar_disciplinas_curso(curso_id):
     return grade
 
 
+def inserir_curso(nome, sigla, tipo, coordenador, duracao, matutino, noturno, sobre):
+    g.execute_db(
+        '''
+        INSERT INTO cursos (nome, sigla, tipo, coordenador, duracao, matutino, noturno, sobre)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ''',
+        (nome, sigla, tipo, coordenador, duracao, matutino, noturno, sobre)
+    )
+
+
 def alterar_curso(curso_id, nome, sigla, tipo, coordenador, duracao, matutino, noturno, sobre):
     g.execute_db(
         '''

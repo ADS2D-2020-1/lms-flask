@@ -9,10 +9,24 @@
         <div class="form-pilha">
             <label for="contato-nome-completo">Nome Completo</label>
             <input type="text" id="contato-nome-completo" name="nome-completo" maxlength="120" required />
+            {% if erros['nome-completo'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['nome-completo'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
         <div class="form-pilha">
             <label for="contato-email">E-Mail</label>
             <input type="email" id="contato-email" name="email" required />
+            {% if erros['email'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['email'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
         <div class="form-pilha">
             <label for="contato-assunto">Assunto</label>
@@ -22,14 +36,35 @@
                 <option value="R">Reclamação</option>
                 <option value="S">Sugestão</option>
             </select>
+            {% if erros['assunto'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['assunto'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
         <div class="form-pilha">
             <label for="contato-mensagem">Mensagem</label>
             <textarea name="mensagem" id="contato-mensagem" maxlength="500" required placeholder="Digite sua mensagem de até 500 caracteres...">
             </textarea>
+            {% if erros['mensagem'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['mensagem'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
         <fieldset class="form-pilha">
             <legend>Como conheceu?</legend>
+            {% if erros['conheceu'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['conheceu'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
             <label for="contato-conheceu-g">Google</label>
             <input type="checkbox" name="conheceu" id="contato-conheceu-g" value="G" />
             <label for="contato-conheceu-i">Indicação</label>

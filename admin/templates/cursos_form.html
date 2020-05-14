@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="/static/css/forms.css">
+{% endblock %}
+
+{% block conteudo %}
+    <h1> {{ titulo_form }} </h1>
+    <form method="POST" novalidate>
+        <div class="form-pilha">
+            <label for="curso-nome">Nome</label>
+            <input type="text" id="curso-nome" name="nome" required value="{{ curso['nome'] }}" />
+            {% if erros['nome'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['nome'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="form-pilha">
+            <label for="curso-sigla">Sigla</label>
+            <input type="text" id="curso-sigla" name="sigla" maxlength="5" required value="{{ curso['sigla'] }}" />
+            {% if erros['sigla'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['sigla'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="form-pilha">
+            <label for="curso-coordenador">Coordenador</label>
+            <input type="text" id="curso-coordenador" name="coordenador" required value="{{ curso['coordenador'] }}" />
+            {% if erros['coordenador'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['coordenador'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="form-pilha">
+            <label for="curso-duracao">Duração em Semestres</label>
+            <input type="number" id="curso-duracao" name="duracao" value="{{ curso['duracao'] }}" required />
+            {% if erros['duracao'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['duracao'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="form-pilha">
+            <label for="curso-tipo">Tipo de Curso</label>
+            <select name="tipo" id="curso-tipo" required>
+                <option value=""> - Selectione - </option>
+                <option value="Tecnólogo">Tecnólogo</option>
+                <option value="Bacharelado">Bacharelado</option>
+                <option value="EAD">EAD</option>
+            </select>
+            {% if erros['duracao'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['duracao'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="form-pilha">
+            <label for="curso-sobre">Sobre o Curso</label>
+            <textarea name="sobre" id="curso-sobre"></textarea>
+            {% if erros['sobre'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['sobre'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <fieldset>
+            <legend>Período</legend>
+            <label for="curso-periodo-n">Noturno</label>
+            <input type="checkbox" name="periodo" id="curso-periodo-n" value="N" />
+            <label for="curso-periodo-m">Matutino</label>
+            <input type="checkbox" name="periodo" id="curso-periodo-m" value="M" />
+        </fieldset>
+        <div class="botoes">
+            <button type="submit" class="botao botao-principal">Salvar</button>
+        </div>
+    </form>
+
+{% endblock %}
