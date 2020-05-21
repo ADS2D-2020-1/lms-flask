@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="/static/css/admin.css" />
+{% endblock %}
+
+
+{% block conteudo %}
+    <section class="admin-conteudo">
+        <nav>
+            <ul class="admin-nav">
+                <li class="titulo">Navegação</li>
+                <li class="item"><a href="/admin/">Início</a></li>
+                <li class="item"><a href="/admin/cursos/">Cursos</a></li>
+            </ul>
+        </nav>
+        <div>
+            {% block admin %}{% endblock %}
+        </div>
+    </section>
+{% endblock %}

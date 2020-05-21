@@ -1,0 +1,64 @@
+.admin-conteudo {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.admin-conteudo > * {
+    margin: 5px 8px;
+}
+
+.admin-conteudo > div {
+    flex: 1;
+}
+
+ul.admin-nav {
+    list-style: none;
+}
+
+ul.admin-nav li.titulo {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+}
+
+ul.admin-nav li.item {
+    background-color: gray;
+    border: 1px solid gray;
+    padding: 3px;
+}
+
+ul.admin-nav li.item a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+ul.admin-nav li.item:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+div.crud-botoes {
+    margin: 8px;
+    text-align: right;
+}
+
+table.crud-lista {
+    width: 100%;
+    text-align: center;
+}
+
+table.crud-lista td, table.crud-lista th {
+    padding: 5px 0;
+} 
+
+table.crud-lista thead tr {
+    background-color: black;
+    color: #696969;
+}
+
+table.crud-lista tbody tr {
+    background-color: #CECECE;
+    color: black;
+    margin: 2px 0;
+}

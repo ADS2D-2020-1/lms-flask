@@ -46,8 +46,10 @@ def listar_disciplinas_curso(curso_id):
 def inserir_curso(nome, sigla, tipo, coordenador, duracao, matutino, noturno, sobre):
     g.execute_db(
         '''
-        INSERT INTO cursos (nome, sigla, tipo, coordenador, duracao, matutino, noturno, sobre)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO cursos
+        (nome, sigla, tipo, coordenador, duracao, matutino, noturno, sobre)
+        VALUES
+        (?, ?, ?, ?, ?, ?, ?, ?)
         ''',
         (nome, sigla, tipo, coordenador, duracao, matutino, noturno, sobre)
     )
@@ -68,4 +70,14 @@ def alterar_curso(curso_id, nome, sigla, tipo, coordenador, duracao, matutino, n
          WHERE id = ?
         ''',
         (nome, sigla, tipo, coordenador, duracao, matutino, noturno, sobre, curso_id)
+    )
+
+
+def remover_curso(curso_id):
+    g.execute_db(
+        '''
+        DELETE FROM cursos
+         WHERE id = ?
+        ''',
+        (curso_id)
     )

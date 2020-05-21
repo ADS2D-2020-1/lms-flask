@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
-
+    
 {% block estilos %}
     <link rel="stylesheet" href="/static/css/forms.css">
 {% endblock %}
-
 {% block conteudo %}
-    <h1> {{ titulo_form }} </h1>
+    <h1>{{ h1 }}</h1>
     <form method="POST" novalidate>
         <div class="form-pilha">
             <label for="curso-nome">Nome</label>
@@ -30,6 +29,17 @@
             {% endif %}
         </div>
         <div class="form-pilha">
+            <label for="curso-duracao">Duração</label>
+            <input type="number" id="curso-duracao" name="duracao" required value="{{ curso['duracao'] }}" />
+            {% if erros['duracao'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['duracao'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="form-pilha">
             <label for="curso-coordenador">Coordenador</label>
             <input type="text" id="curso-coordenador" name="coordenador" required value="{{ curso['coordenador'] }}" />
             {% if erros['coordenador'] | length > 0 %}
@@ -41,27 +51,16 @@
             {% endif %}
         </div>
         <div class="form-pilha">
-            <label for="curso-duracao">Duração em Semestres</label>
-            <input type="number" id="curso-duracao" name="duracao" value="{{ curso['duracao'] }}" required />
-            {% if erros['duracao'] | length > 0 %}
-                <ul class="erros">
-                    {% for erro in erros['duracao'] %}
-                        <li>{{ erro }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </div>
-        <div class="form-pilha">
-            <label for="curso-tipo">Tipo de Curso</label>
+            <label for="curso-tipo">Tipo</label>
             <select name="tipo" id="curso-tipo" required>
-                <option value=""> - Selectione - </option>
-                <option value="Tecnólogo">Tecnólogo</option>
-                <option value="Bacharelado">Bacharelado</option>
-                <option value="EAD">EAD</option>
+                <option value="">Selecione...</option>
+                <option value="Bacharelado" {% if curso['tipo'] == 'Bacharelado' %}selected{% endif %} >Bacharelado</option>
+                <option value="Tecnólogo" {% if curso['tipo'] == 'Tecnólogo' %}selected{% endif %}>Tecnólogo</option>
+                <option value="EaD" {% if curso['tipo'] == 'EaD' %}selected{% endif %}>EaD</option>
             </select>
-            {% if erros['duracao'] | length > 0 %}
+            {% if erros['tipo'] | length > 0 %}
                 <ul class="erros">
-                    {% for erro in erros['duracao'] %}
+                    {% for erro in erros['tipo'] %}
                         <li>{{ erro }}</li>
                     {% endfor %}
                 </ul>
@@ -69,7 +68,9 @@
         </div>
         <div class="form-pilha">
             <label for="curso-sobre">Sobre o Curso</label>
-            <textarea name="sobre" id="curso-sobre"></textarea>
+            <textarea name="sobre" id="curso-sobre" required>
+                {{ curso['sobre'] }}
+            </textarea>
             {% if erros['sobre'] | length > 0 %}
                 <ul class="erros">
                     {% for erro in erros['sobre'] %}
@@ -78,16 +79,22 @@
                 </ul>
             {% endif %}
         </div>
-        <fieldset>
-            <legend>Período</legend>
-            <label for="curso-periodo-n">Noturno</label>
-            <input type="checkbox" name="periodo" id="curso-periodo-n" value="N" />
+        <fieldset class="form-pilha">
+            <legend>Períodos</legend>
+            {% if erros['periodo'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['periodo'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
             <label for="curso-periodo-m">Matutino</label>
-            <input type="checkbox" name="periodo" id="curso-periodo-m" value="M" />
+            <input type="checkbox" name="periodo" id="curso-periodo-m" value="M" {% if curso['matutino'] == 1 %}checked{% endif %} />
+            <label for="curso-periodo-n">Noturno</label>
+            <input type="checkbox" name="periodo" id="curso-periodo-n" value="N" {% if curso['noturno'] == 1 %}checked{% endif %} />
         </fieldset>
         <div class="botoes">
             <button type="submit" class="botao botao-principal">Salvar</button>
         </div>
     </form>
-
 {% endblock %}
