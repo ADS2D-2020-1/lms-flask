@@ -67,6 +67,24 @@
             {% endif %}
         </div>
         <div class="form-pilha">
+            <label for="curso-disciplina">Disciplina Padrão</label>
+            <select name="disciplina" id="curso-disciplina" required>
+                <option value="">Selecione...</option>
+                {% for discip in disciplinas %}
+                    <option value="{{ discip['id'] }}">
+                        {{ discip['nome'] }}
+                    </option>
+                {% endfor %}
+            </select>
+            {% if erros['disciplina'] | length > 0 %}
+                <ul class="erros">
+                    {% for erro in erros['disciplina'] %}
+                        <li>{{ erro }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="form-pilha">
             <label for="curso-sobre">Sobre o Curso</label>
             <textarea name="sobre" id="curso-sobre" required>
                 {{ curso['sobre'] }}

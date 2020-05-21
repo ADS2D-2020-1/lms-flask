@@ -6,6 +6,11 @@ def listar_todos_cursos():
     return rv
 
 
+def listar_disciplinas():
+    rv = g.query_db('SELECT * FROM disciplinas')
+    return rv
+
+
 def obter_curso(sigla='', id=''):
     if sigla:
         curso = g.query_db(

@@ -64,11 +64,14 @@ def cursos_incluir():
         )
         return redirect('/admin/cursos/')
 
+    disciplinas = curso_dao.listar_disciplinas()
     return render_template(
         'cursos_form.html',
         titulo='Novo Curso',
         h1='Incluir Novo Curso',
-        erros=erros
+        erros=erros,
+        curso={},
+        disciplinas=disciplinas
     )
 
 
